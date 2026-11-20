@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Host an event | Convene</title>
+  <meta name="theme-color" content="#4a1d96">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="create" data-root="../">
+  <div id="site-header"></div>
+
+  <main class="container page">
+    <div class="page-head">
+      <h1 id="page-title">Host an event</h1>
+      <p id="page-sub">Fill in the details. You can edit them later.</p>
+    </div>
+
+    <div id="state-msg"></div>
+
+    <form id="event-form" class="card form-card" novalidate hidden>
+      <div id="form-error" class="form-error" role="alert" hidden></div>
+
+      <div class="field">
+        <label for="title">Title</label>
+        <input type="text" id="title" maxlength="120" required>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category"></select>
+        </div>
+        <div class="field">
+          <label for="capacity">Capacity</label>
+          <input type="number" id="capacity" min="1" step="1" placeholder="Leave empty for unlimited">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea id="description" maxlength="5000" required></textarea>
+        <span class="hint">What is it, who is it for, what should people bring?</span>
+      </div>
+
+      <div class="field">
+        <label for="location">Location</label>
+        <input type="text" id="location" maxlength="160" placeholder="Venue and city, or Online" required>
+      </div>
+
+      <div class="row-2">
+        <div class="field">
+          <label for="starts">Starts</label>
+          <input type="datetime-local" id="starts" required>
+        </div>
+        <div class="field">
+          <label for="ends">Ends</label>
+          <input type="datetime-local" id="ends" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="image">Cover image link (optional)</label>
+        <input type="url" id="image" placeholder="https://...">
+        <span class="hint">A direct https link to an image. Leave empty to use a plain cover.</span>
+      </div>
+
+      <div class="field" id="status-field" hidden>
+        <label for="status">Status</label>
+        <select id="status">
+          <option value="published">Published (open for registration)</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn" type="submit" id="save-btn">Publish event</button>
+        <a class="btn btn-outline" href="../dashboard/">Cancel</a>
+        <button class="btn btn-danger" type="button" id="delete-btn" hidden style="margin-left:auto">
+          Delete event
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="create.js"></script>
+</body>
+</html>

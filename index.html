@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convene: simple event management</title>
+  <meta name="description" content="Find events, register in one click, and host your own. Convene keeps event management simple.">
+  <meta name="theme-color" content="#4a1d96">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home" data-root="./">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Events, organised without the clutter.</h1>
+        <p>Discover what is happening, reserve your spot in one click, or host your own event and manage everyone who is coming.</p>
+        <div class="hero-actions">
+          <a class="btn" href="events/">Browse events</a>
+          <a class="btn btn-ghost" href="create/">Host an event</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="section">
+        <div class="section-head">
+          <h2>Coming up</h2>
+          <a href="events/">View all events</a>
+        </div>
+        <div class="grid" id="home-events"><div class="loading">Loading events...</div></div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><h2>How it works</h2></div>
+        <div class="steps">
+          <div class="step card"><div class="num">1</div><h3>Find an event</h3><p>Search by name or place, or filter by category to see what suits you.</p></div>
+          <div class="step card"><div class="num">2</div><h3>Reserve your spot</h3><p>Create a free account and register. Spots are counted live, so a full event never overbooks.</p></div>
+          <div class="step card"><div class="num">3</div><h3>Host and manage</h3><p>Publish your own event, see who registered, check people in on the day and export the list.</p></div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Planning something?</h2>
+        <p>Create your event in under a minute.</p>
+        <a class="btn" href="create/">Host an event</a>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

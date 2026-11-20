@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | Convene</title>
+  <meta name="theme-color" content="#4a1d96">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="login" data-root="../">
+  <div id="site-header"></div>
+
+  <main class="container page">
+    <div class="auth-wrap">
+      <div class="page-head">
+        <h1 id="auth-title">Log in</h1>
+        <p id="auth-sub">Welcome back.</p>
+      </div>
+
+      <div class="card form-card">
+        <div id="auth-message" role="alert" hidden></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" autocomplete="current-password" required>
+          </div>
+          <button class="btn btn-block" type="submit" id="login-submit">Log in</button>
+        </form>
+
+        <form id="signup-form" novalidate hidden>
+          <div class="field">
+            <label for="signup-name">Full name</label>
+            <input type="text" id="signup-name" autocomplete="name" maxlength="80" required>
+          </div>
+          <div class="field">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" autocomplete="new-password" minlength="8" required>
+            <span class="hint">At least 8 characters.</span>
+          </div>
+          <button class="btn btn-block" type="submit" id="signup-submit">Create account</button>
+        </form>
+
+        <p class="switch" id="switch-login">New to Convene? <button type="button" id="to-signup">Create an account</button></p>
+        <p class="switch" id="switch-signup" hidden>Already have an account? <button type="button" id="to-login">Log in</button></p>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

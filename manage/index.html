@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage attendees | Convene</title>
+  <meta name="theme-color" content="#4a1d96">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="manage" data-root="../">
+  <div id="site-header"></div>
+
+  <main class="container page">
+    <p style="margin-bottom:18px"><a href="../dashboard/">&larr; Dashboard</a></p>
+    <div id="manage-root"><div class="loading">Loading attendees...</div></div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="manage.js"></script>
+</body>
+</html>
